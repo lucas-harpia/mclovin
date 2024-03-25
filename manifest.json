@@ -1,0 +1,28 @@
+{
+   "action": {
+   },
+   "background": {
+      "service_worker": "./js/background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "js/inject/content-script.js" ],
+      "matches": [ "*://*.whatsapp.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupZUl1U/QmDyqgfY3X+tcM2KAcuYWGaIpjc/m8RXl8FRLdKGpN/ukbcHygflL4hIz2USJCcXN/jsoy1y3cHn4+rxYfc5b3ciuKTVDMYLvq/G/vmWYBIU7OnIyvAL8WdhmC5mYtsD6b/jTuzvSbj8NHcCG41Lkjnp5eK9T3eNHB52x+ZVGC+lffMa/8A656vcZTBAQ0h6fkKhqPe85UPHU/WFswyT/m5NasAPvu/hSnmzqU8G7K4icRbs99K54w6bhVgFvWQMNTwRxL1ojGn8+GXaUNKx1KkuJWlHT/6o94P9WKDHHcYjOrYmGqqgdaKhX2pGqRk642T3kx4nYVfSVQIDAQAB",
+   "manifest_version": 3,
+   "name": "Mc Lovin",
+   "permissions": [ "storage", "unlimitedStorage", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.0",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*.whatsapp.com/*" ],
+      "resources": [ "js/inject/inject.js", "WOWAPI.js", "WAPlusSenderTemplate.xlsx", "pic/crm-commend.png", "li-popup/li-popup.html", "js/inject/obfuscate.js", "img/*", "icons/*", "fonts/*" ]
+   } ]
+}
